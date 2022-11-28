@@ -1,0 +1,30 @@
+{
+  "name": "docsify-web-component-viewer",
+  "version": "1.0.0",
+  "description": "A Docsify plugin for previewing and customizing web components.",
+  "main": "dist/web-component-viewer.js",
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zolk/docsify-web-component-viewer.git"
+  },
+  "author": "Kevin Zolkiewicz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zolk/docsify-web-component-viewer/issues"
+  },
+  "homepage": "https://github.com/zolk/docsify-web-component-viewer#readme",
+  "devDependencies": {
+    "eslint": "^8.28.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.0.4",
+    "prettier": "^2.8.0"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix"
+  }
+}
