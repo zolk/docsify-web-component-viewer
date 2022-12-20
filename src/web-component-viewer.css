@@ -1,0 +1,259 @@
+.code-preview__preview {
+  z-index: 1;
+  overflow: hidden;
+  position: relative;
+  min-width: 19rem;
+  max-width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.code-preview__scrollable {
+  width: calc(100% - 1.5rem);
+  padding: 2rem;
+  overflow: auto;
+}
+
+.code-preview__resizer {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  background-color: #f8f8f8;
+  border-left: 1px solid rgba(0, 0, 0, 0.07);
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  color: #34495e;
+  cursor: grab;
+  user-select: none;
+}
+
+.code-preview__resizer:hover {
+  background-color: #f3f3f3;
+}
+
+.code-preview__resizer--resizing {
+  cursor: grabbing;
+}
+
+.code-preview__source {
+  display: none;
+}
+
+.code-preview--expanded .code-preview__source {
+  position: relative;
+  top: -1px;
+  display: block;
+}
+
+.markdown-section .code-preview__source pre {
+  position: relative;
+  margin: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.code-preview__source pre::after {
+  display: none;
+}
+
+.code-preview__actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "actions toggle";
+  align-items: start;
+  padding: 0.3rem 0.1rem;
+}
+
+.code-preview__toggle {
+  grid-area: toggle;
+  justify-self: end;
+}
+
+.code-preview__actions-buttons {
+  grid-area: actions;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .code-preview__actions {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .code-preview__actions-buttons {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+
+.code-preview__actions button,
+.code-preview__actions a {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.code-preview__actions button {
+  color: var(--theme-color, #42b983);
+  font-weight: 600;
+  text-decoration: underline;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.code-preview--expanded .code-preview__toggle svg {
+  transform: rotate(180deg);
+}
+
+.code-preview__actions button svg,
+.code-preview__actions a svg {
+  width: 0.9rem;
+}
+
+.example {
+  background-color: var(--content-color-background);
+  color: var(--content-color-text);
+}
+
+.example:not(.controls) .code-preview__resizer {
+  display: none;
+}
+
+.example:not(.controls) .code-preview__preview {
+  height: 100vh;
+  border: none;
+}
+
+.controls {
+  overflow: hidden;
+  width: 100%;
+  max-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  grid-template-rows: 1fr 1.2fr;
+  grid-template-areas:
+    "preview preview"
+    "code controls";
+}
+
+.controls .code-preview__preview {
+  grid-area: preview;
+  max-width: 100vw;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  border-top: none;
+  border-bottom: none;
+}
+
+.controls .code-preview__resizer {
+  height: calc(100% + 1px);
+  border-bottom: 0;
+}
+
+.controls__code {
+  overflow: scroll;
+  position: relative;
+  grid-area: code;
+  background-color: #f8f8f8;
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+  font-size: 0.875rem;
+}
+
+.controls__code pre,
+.controls__code code {
+  display: inherit;
+  overflow: inherit;
+  width: 100%;
+  height: 100%;
+  max-height: inherit;
+  background-color: inherit;
+}
+
+.controls__code pre {
+  overflow: scroll;
+  margin: 0;
+}
+
+.controls__code pre code {
+  padding: 3rem 1.5rem;
+}
+
+.controls__code .copy-code-button {
+  top: 0.5rem;
+  right: 0.5rem;
+  opacity: 1;
+}
+
+.controls__inputs {
+  overflow: auto;
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+  border-left: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.markdown-section.controls__inputs {
+  max-width: 100%;
+}
+
+.markdown-section.controls__inputs table {
+  display: table;
+  overflow: auto;
+  width: 100%;
+  max-width: unset;
+  border-collapse: collapse;
+}
+
+.controls__inputs table thead th:last-of-type {
+  width: 20rem;
+}
+
+.controls__inputs table thead th:first-of-type,
+.controls__inputs table tbody th {
+  width: 8rem;
+  white-space: nowrap;
+}
+
+.controls__inputs table tbody th,
+.controls__inputs table tbody td {
+  text-align: left;
+}
+
+.controls__group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.controls__group label {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.controls__group input[type="text"],
+.controls__group input[type="number"],
+.controls__inputs textarea,
+.controls__group select {
+  width: 100%;
+  min-width: 15rem;
+}
+
+.controls__group label span {
+  position: absolute;
+  top: auto;
+  left: -10000px;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+}
