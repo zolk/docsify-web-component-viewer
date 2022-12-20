@@ -44,7 +44,9 @@ export function renderPreview(codeBlock, id) {
   const previewInterface = `
     <div class="code-preview ${isExpanded ? "code-preview--expanded" : ""}">
       <div class="code-preview__preview" id=${exampleId}>
-        ${codeBlock.textContent}
+        <div class="code-preview__scrollable">
+          ${codeBlock.textContent}
+        </div>
         <div
           class="code-preview__resizer"
           aria-controls="${exampleId}"
