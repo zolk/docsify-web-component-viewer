@@ -124,19 +124,19 @@ You can test this project locally in a demo Docsify installation.
 
 First, clone this repo:
 
-```
+```bash
 git clone https://github.com/zolk/docsify-web-component-viewer.git
 ```
 
 Then install dependencies (you'll need [Node](https://nodejs.org/en/download/package-manager/) installed):
 
-```
+```bash
 npm install
 ```
 
 Finally, boot the local dev server:
 
-```
+```bash
 npm start
 ```
 
