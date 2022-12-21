@@ -57,6 +57,44 @@ the language name for your code block:
 ```
 </pre>
 
+Add the word "expanded" if you'd like the code source to be displayed by default:
+
+<pre>
+```html preview expanded
+<ds-button>My Button</ds-button>
+```
+</pre>
+
+To enable viewing the preview in an isolated window, add any string that will
+serve as a slug for the link:
+
+<pre>
+```html preview expanded mybutton
+<ds-button>My Button</ds-button>
+```
+</pre>
+
+To enable the customization feature, which is inspired by Storybook's Controls
+feature, add `controls:[name-of-component]` _before_ the slug:
+
+<pre>
+```html preview expanded controls:button mybutton
+<ds-button>My Button</ds-button>
+```
+</pre>
+
+The slug must always be the last term provided to the code block.
+
+💡 **Protip:** If your filename matches the name of your component
+(e.g., `button.md`) then you can exclude the component name when enabling controls:
+
+<pre>
+// button.md
+```html preview expanded controls mybutton
+<ds-button>My Button</ds-button>
+```
+</pre>
+
 ## Options
 
 ### componentDocs.manifestPath
