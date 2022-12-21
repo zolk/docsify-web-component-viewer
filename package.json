@@ -1,6 +1,6 @@
 {
   "name": "docsify-web-component-viewer",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Docsify plugin for previewing and customizing web components.",
   "main": "dist/web-component-viewer.min.js",
   "scripts": {
