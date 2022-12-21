@@ -3,7 +3,7 @@
 # docsify-web-component-viewer
 
 A Docsify plugin for previewing and customizing examples of Custom Elements (Web
-Components).
+Components). See a [live example](https://ds-starter-kit.vercel.app/components/button) of this plugin in use.
 
 ## Requirements
 
