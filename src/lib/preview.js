@@ -5,13 +5,14 @@
  */
 
 import { controlsIcon, windowIcon, resizerIcon, arrowIcon } from "./icons.js";
+import { isControlsReady } from "./utilities.js";
 
 export function renderPreview(codeBlock, id) {
   const pre = codeBlock.closest("pre");
   const isExpanded = codeBlock.classList.contains("expanded");
-  const showControls = [...codeBlock.classList].filter((e) =>
-    e.startsWith("controls")
-  ).length;
+  const showControls =
+    isControlsReady &&
+    [...codeBlock.classList].filter((e) => e.startsWith("controls")).length;
   const sourceId = "code-source-" + id;
 
   // Determine slot
