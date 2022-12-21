@@ -57,6 +57,8 @@ the language name for your code block:
 ```
 </pre>
 
+<img src="examples/preview.png">
+
 Add `expanded` if you'd like the code source to be displayed by default:
 
 <pre>
@@ -64,6 +66,8 @@ Add `expanded` if you'd like the code source to be displayed by default:
 <ds-button>My Button</ds-button>
 ```
 </pre>
+
+<img src="examples/expanded.png">
 
 To enable viewing the preview in an isolated window, add any string that will
 serve as a slug for the link:
@@ -74,6 +78,8 @@ serve as a slug for the link:
 ```
 </pre>
 
+<img src="examples/window.png">
+
 To enable the customization feature, which is inspired by Storybook's Controls
 feature, add `controls:[name-of-component]` _before_ the slug:
 
@@ -82,6 +88,8 @@ feature, add `controls:[name-of-component]` _before_ the slug:
 <ds-button>My Button</ds-button>
 ```
 </pre>
+
+<img src="examples/controls.png">
 
 The slug must always be the last term provided to the code block.
 
