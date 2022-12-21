@@ -57,7 +57,7 @@ the language name for your code block:
 ```
 </pre>
 
-<img src="examples/preview.png">
+<img src="examples/preview.png" width="450" alt="Screenshot showing a rendered button in a resizable bounding box with a Show Code button">
 
 Add `expanded` if you'd like the code source to be displayed by default:
 
@@ -67,7 +67,7 @@ Add `expanded` if you'd like the code source to be displayed by default:
 ```
 </pre>
 
-<img src="examples/expanded.png">
+<img src="examples/expanded.png" width="450" alt="Screenshot showing a rendered button in a resizable bounding box with the source code visible and a Hide Code button">
 
 To enable viewing the preview in an isolated window, add any string that will
 serve as a slug for the link:
@@ -78,7 +78,7 @@ serve as a slug for the link:
 ```
 </pre>
 
-<img src="examples/window.png">
+<img src="examples/window.png" width="450" alt="Screenshot showing a rendered button in a resizable bounding box with the source code visible accompanied by Open in New Window and Show Code buttons">
 
 To enable the customization feature, which is inspired by Storybook's Controls
 feature, add `controls:[name-of-component]` _before_ the slug:
@@ -89,7 +89,7 @@ feature, add `controls:[name-of-component]` _before_ the slug:
 ```
 </pre>
 
-<img src="examples/controls.png">
+<img src="examples/controls.png" width="450" alt="Screenshot showing a rendered button in a resizable bounding box with the source code visible accompanied by Open in New Window, Customize, and Show Code buttons">
 
 The slug must always be the last term provided to the code block.
 
