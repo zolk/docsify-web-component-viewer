@@ -48,7 +48,7 @@ Default styles, which you can override or replace with your own:
 ### Code Viewer Blocks
 
 This plugin works by replacing standard Markdown code blocks with
-fully-functional examples when desired. Just add the word "preview" after
+fully-functional examples when desired. Just add `preview` after
 the language name for your code block:
 
 <pre>
@@ -57,7 +57,7 @@ the language name for your code block:
 ```
 </pre>
 
-Add the word "expanded" if you'd like the code source to be displayed by default:
+Add `expanded` if you'd like the code source to be displayed by default:
 
 <pre>
 ```html preview expanded
