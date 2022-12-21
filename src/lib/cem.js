@@ -1,8 +1,12 @@
-export const TAG_PREFIX = `${window.$docsify.componentDocs.prefix}-`;
+import { isControlsReady } from "./utilities.js";
 
-export const customElements = fetch(window.$docsify.componentDocs.manifestPath)
-  .then((res) => res.json())
-  .catch((err) => console.error(err));
+export const TAG_PREFIX = `${window.$docsify.componentDocs?.prefix}-`;
+
+export const customElements =
+  isControlsReady &&
+  fetch(window.$docsify.componentDocs?.manifestPath)
+    .then((res) => res.json())
+    .catch((err) => console.error(err));
 
 export const getAllComponents = (metadata) => {
   const components = [];

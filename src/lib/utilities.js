@@ -4,3 +4,7 @@ export function kebabToTitleCase(str) {
     return x.toUpperCase();
   });
 }
+
+export const isControlsReady =
+  !!window.$docsify.componentDocs?.manifestPath &&
+  !!window.$docsify.componentDocs?.prefix;

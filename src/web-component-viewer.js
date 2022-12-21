@@ -26,7 +26,7 @@
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-import "./web-component-viewer.css";
+// import "./web-component-viewer.css";
 import {
   renderPreview,
   handlePreviewResize,
@@ -34,7 +34,7 @@ import {
 } from "./lib/preview.js";
 import { renderControlsInterface } from "./lib/controls.js";
 import { runScript } from "./lib/script-tag.js";
-import { kebabToTitleCase } from "./lib/utilities.js";
+import { kebabToTitleCase, isControlsReady } from "./lib/utilities.js";
 import { TAG_PREFIX } from "./lib/cem.js";
 
 const handleDocumentClick = (e) => handleCodeToggle(e);
@@ -118,7 +118,7 @@ function webComponentViewer(hook, vm) {
       }
 
       // Set the controls page title and load the controls interface.
-      if (vm.route.query.controls) {
+      if (isControlsReady && vm.route.query.controls) {
         document.title = `${document.title} - ${kebabToTitleCase(
           exampleId
         )} - Customize`;
