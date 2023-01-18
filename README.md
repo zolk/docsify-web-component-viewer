@@ -28,7 +28,6 @@ for a fully integrated example:
   window.$docsify = {
     // ... (your existing Docsify config)
     componentDocs: {
-      prefix: "ds",
       manifestPath: "/dist/custom-elements.json",
     },
   };
@@ -119,8 +118,10 @@ file (see requirements).
 - Type: `String`
 - Default: `undefined`
 
-**Required for Customization feature.** The prefix used by your components. For
-example, `ds` if your components use names such as `ds-button` and `ds-card`.
+An optional standardized prefix used by all your components. For example, `ds`
+if all your components are named such as `ds-button` and `ds-card`. Setting
+this feature will allow you to exclude the prefix when specifying the component
+name when enabling the customization feature.
 
 ## Live Example
 

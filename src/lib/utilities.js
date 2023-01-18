@@ -5,6 +5,4 @@ export function kebabToTitleCase(str) {
   });
 }
 
-export const isControlsReady =
-  !!window.$docsify.componentDocs?.manifestPath &&
-  !!window.$docsify.componentDocs?.prefix;
+export const isControlsReady = !!window.$docsify.componentDocs?.manifestPath;
