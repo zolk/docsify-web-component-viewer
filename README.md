@@ -3,7 +3,7 @@
 # docsify-web-component-viewer
 
 A Docsify plugin for previewing and customizing examples of Custom Elements (Web
-Components). See a [live example](https://ds-starter-kit.vercel.app/components/button) of this plugin in use.
+Components). See a [live example](https://docsify-breeze.vercel.app/components/button) of this plugin in use.
 
 ## Requirements
 
@@ -12,12 +12,12 @@ file in order to enable the Customization feature of this plugin. You can
 generate one for your project by incorporating the [CEM Analyzer](https://custom-elements-manifest.open-wc.org/analyzer/getting-started/)
 into your build process.
 
-Refer to the [DS Starter Kit project](https://github.com/zolk/ds-starter-kit)
+Refer to [Docsify Breeze](https://github.com/zolk/docsify-breeze)
 for a fully integrated example:
 
-- CEM Analyzer config: [custom-elements-manifest.config.js](https://github.com/zolk/ds-starter-kit/blob/main/custom-elements-manifest.config.js)
-- ESBuild script that runs `cem analyze` as part of the build process: [build.js](https://github.com/zolk/ds-starter-kit/blob/main/scripts/build.js)
-- Documentation example for a component: [button.ts](https://github.com/zolk/ds-starter-kit/blob/main/src/components/button/button.ts)
+- CEM Analyzer config: [custom-elements-manifest.config.js](https://github.com/zolk/docsify-breeze/blob/main/custom-elements-manifest.config.js)
+- ESBuild script that runs `cem analyze` as part of the build process: [build.js](https://github.com/zolk/docsify-breeze/blob/main/scripts/build.js)
+- Documentation example for a component: [button.ts](https://github.com/zolk/docsify-breeze/blob/main/src/components/button/button.ts)
 
 ## Usage
 
