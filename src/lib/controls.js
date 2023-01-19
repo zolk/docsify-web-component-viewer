@@ -296,7 +296,7 @@ export async function renderControlsInterface(tagName, code) {
   document.body.appendChild(code);
 
   // Attach input handlers.
-  const inputs = document.querySelectorAll("input, select, textarea");
+  const inputs = controlsInterface.querySelectorAll("input, select, textarea");
   const element = document.querySelector(tagName);
   handleControlInputs(inputs, element, code);
 }

@@ -137,9 +137,12 @@ First, clone this repo:
 git clone https://github.com/zolk/docsify-web-component-viewer.git
 ```
 
-Then install dependencies (you'll need [Node](https://nodejs.org/en/download/package-manager/) installed):
+Then install dependencies (you'll need
+[Node](https://nodejs.org/en/download/package-manager/) installed and the
+`docsify` command available):
 
 ```bash
+npm install -g docsify-cli
 npm install
 ```
 
