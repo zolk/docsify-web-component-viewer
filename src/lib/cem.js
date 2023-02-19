@@ -1,6 +1,6 @@
 import { isControlsReady } from "./utilities.js";
 
-const configPrefix = window.$docsify.componentDocs.prefix;
+const configPrefix = window.$docsify.componentDocs?.prefix;
 
 export const TAG_PREFIX = configPrefix ? `${configPrefix}-` : "";
 
