@@ -24,7 +24,7 @@ export function renderPreview(codeBlock, id) {
   // Controls button
   const controlsBtn = `
     <div class="code-preview__controls">
-      <a href="?controls=${getSlug()}" target="_blank">
+      <a href="?controls=${getSlug()}" target="_blank" class="force-new-window">
         ${controlsIcon}
         Customize
       </a>
@@ -34,7 +34,7 @@ export function renderPreview(codeBlock, id) {
   // Preview button
   const previewBtn = `
     <div class="code-preview__new-window">
-      <a href="?preview=${getSlug()}" target="_blank">
+      <a href="?preview=${getSlug()}" target="_blank" class="force-new-window">
         ${windowIcon}
         Open in New Window
       </a>

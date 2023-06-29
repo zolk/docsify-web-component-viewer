@@ -78,6 +78,18 @@ function webComponentViewer(hook, vm) {
       const preview = block.querySelector(".code-preview__preview");
       handlePreviewResize(preview, resizer);
     });
+
+    // (Hopefully) temporary fix to Docsify issue ignoring `target="_blank"`
+    const newWindowBtn = document.querySelectorAll(".force-new-window");
+
+    newWindowBtn.forEach((button) => {
+      button.addEventListener("click", (e) => {
+        e.preventDefault();
+        const href = e.target.href;
+        const target = e.target.target;
+        window.open(href, target);
+      });
+    });
   });
 
   // Prepare to load a preview in an isolated window.
