@@ -5,6 +5,7 @@
   "main": "dist/web-component-viewer.min.js",
   "type": "module",
   "scripts": {
+    "test": "node --test",
     "prepare": "husky install",
     "prepublishOnly": "npm run build",
     "build": "node scripts/build.js",

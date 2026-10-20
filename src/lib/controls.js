@@ -122,16 +122,22 @@ export async function renderControlsPanel(tagName) {
   const componentMeta = getComponent(metadata, tagName);
   const element = document.querySelector(tagName);
   const slots = componentMeta.slots;
-  const members = componentMeta.members?.filter(
-    (member) => member.description && member.privacy !== "private"
+  const members = (componentMeta.members ?? []).filter(
+    (member) =>
+      member.description && (!member.privacy || member.privacy === "public")
   );
   const controllableTypes = ["boolean", "number", "string", "|"];
   const isControllable = (type) =>
     controllableTypes.some((i) => type.includes(i));
 
-  const props = members?.filter((prop) => {
-    return prop.kind === "field" && isControllable(prop.type.text);
-  });
+  const props = members.filter(
+    (prop) =>
+      prop.kind === "field" &&
+      prop.attribute &&
+      !prop.readonly &&
+      !prop.static &&
+      isControllable(prop.type?.text ?? "")
+  );
 
   const renderSlotTable = `
     <table>
