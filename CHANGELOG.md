@@ -1,3 +1,8 @@
+## 1.1.4
+
+- Exclude fields without backing attributes, non-public fields, and readonly or
+  static fields from controls; handle missing type metadata and members (#10, #11).
+
 ## 1.1.3
 
 - Add workaround for issue affecting links not opening in a new window (#9)
